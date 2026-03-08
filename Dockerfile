@@ -5,9 +5,9 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci --omit=dev
 
-COPY dist/server.js ./
+COPY dist/server.cjs ./
 
 ENV PORT=3001
 EXPOSE 3001
 
-CMD ["node", "server.js"]
+CMD ["node", "server.cjs"]

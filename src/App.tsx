@@ -51,49 +51,56 @@ function AppContent() {
                 d="M9 5l7 7-7 7"
               />
             </svg>
-            Current areas of focus
+            Current projects I am working on...
           </button>
           {areasExpanded && (
             <ul className="mt-3 ml-6 space-y-3 text-gray-700 dark:text-gray-400 list-disc text-sm">
               <li>
-                Modernizing legacy{" "}
+                Professional: Modernizing legacy{" "}
                 <strong className="text-gray-900 dark:text-gray-200">
-                  Angular
+                  Angular (v20+)
                 </strong>{" "}
                 app
                 <br />
                 <span className="text-gray-500 dark:text-gray-500">
-                  → Signals, custom directives & pipes, standalone components
+                  → Signals, custom directives & pipes, standalone components to
+                  make it future proof. Also simplifying the codebase to make
+                  more accessible to other developers.
                 </span>
               </li>
               <li>
-                Design system with{" "}
+                Professional: Design system with{" "}
                 <strong className="text-gray-900 dark:text-gray-200">
-                  PrimeNG
+                  PrimeNG (v19+)
                 </strong>{" "}
                 theming
                 <br />
                 <span className="text-gray-500 dark:text-gray-500">
-                  → Integrating into legacy codebase
+                  → Integrating into legacy codebase and reduce complexity of
+                  different CSS paradigms as component libraries, utility
+                  frameworks vs BEM pattern.
                 </span>
               </li>
               <li>
-                Dependency reduction
+                Professional: Dependency reduction
                 <br />
                 <span className="text-gray-500 dark:text-gray-500">
-                  → Easier maintenance, faster upgrades
+                  → Prefering to use specification build-ins, rather than
+                  installing many libraries. Easier maintenance, faster upgrades
                 </span>
               </li>
               <li>
-                Multi-org management dashboard
+                Professional: Multi-org management dashboard for Atlassian
+                Confluence (Data Center)
                 <br />
                 <span className="text-gray-500 dark:text-gray-500">
-                  → Built from scratch
+                  → Built from scratch and communicates with confluence and
+                  custom REST API backend.
                 </span>
               </li>
               <li>
                 <strong className="text-gray-900 dark:text-gray-200">
-                  Fullstack
+                  Personal: Fullstack
                 </strong>{" "}
                 Q&A platform for pet owners
                 <br />

@@ -6,9 +6,11 @@ import {
   fetchMergedPRs,
   fetchPRCommits,
   fetchCommitDetail,
+  RateLimitError,
   type PullRequest,
   type CommitDetail,
 } from "../services/github";
+import { RateLimitToast } from "./RateLimitToast";
 
 interface PRWithCommits {
   pr: PullRequest;
@@ -79,7 +81,13 @@ export function PRFeed() {
         }
         setPage(pageNum + 1);
       } catch (err) {
-        toast.error(err instanceof Error ? err.message : "Failed to load PRs");
+        if (err instanceof RateLimitError) {
+          toast((t) => <RateLimitToast retryAfter={err.retryAfter} toastId={t.id} />, {
+            duration: err.retryAfter * 1000,
+          });
+        } else {
+          toast.error(err instanceof Error ? err.message : "Failed to load PRs");
+        }
       } finally {
         setLoading(false);
       }

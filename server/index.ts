@@ -1,5 +1,5 @@
 import { config } from 'dotenv'
-config({ path: '.env.local' })
+config({ path: '.env.local' })  // Only for local dev, ignored in production
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
 import { githubRoutes } from './routes/github'

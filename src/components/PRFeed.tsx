@@ -84,6 +84,7 @@ export function PRFeed() {
         if (err instanceof RateLimitError) {
           toast((t) => <RateLimitToast retryAfter={err.retryAfter} toastId={t.id} />, {
             duration: err.retryAfter * 1000,
+            className: 'dark:!bg-gray-800 dark:!text-gray-100',
           });
         } else {
           toast.error(err instanceof Error ? err.message : "Failed to load PRs");

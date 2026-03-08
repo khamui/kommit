@@ -3,8 +3,10 @@ import { config } from '../config'
 const API_BASE = `${config.api.baseUrl}/github`
 
 export class RateLimitError extends Error {
-  constructor(public retryAfter: number) {
+  retryAfter: number
+  constructor(retryAfter: number) {
     super(`Rate limit exceeded. Retry in ${retryAfter}s`)
+    this.retryAfter = retryAfter
   }
 }
 

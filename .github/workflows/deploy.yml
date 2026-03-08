@@ -29,8 +29,8 @@ jobs:
 
       - run: npm run build
         env:
-          VITE_GITHUB_USERNAME: ${{ vars.GH_USERNAME }}
-          VITE_API_URL: ${{ vars.API_URL }}
+          VITE_GITHUB_USERNAME: ${{ secrets.GH_USERNAME }}
+          VITE_API_URL: ${{ secrets.API_URL }}
 
       - uses: actions/upload-pages-artifact@v3
         with:

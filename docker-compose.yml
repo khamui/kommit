@@ -1,0 +1,9 @@
+services:
+  kommit-api:
+    build: .
+    ports:
+      - "3001:3001"
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - ALLOWED_ORIGIN=${ALLOWED_ORIGIN}
+    restart: unless-stopped

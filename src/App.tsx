@@ -54,55 +54,76 @@ function AppContent() {
             Current projects I am working on...
           </button>
           {areasExpanded && (
-            <ul className="mt-3 ml-6 space-y-3 text-gray-700 dark:text-gray-400 list-disc text-sm">
+            <ul className="mt-3 ml-6 space-y-3 text-gray-800 dark:text-gray-300 list-disc text-sm">
               <li>
-                Professional: Modernizing legacy{" "}
                 <strong className="text-gray-900 dark:text-gray-200">
-                  Angular (v20+)
-                </strong>{" "}
-                app
+                  Professional
+                </strong>
+                : Modernizing legacy to recent versions of Angular (v20+)
                 <br />
                 <span className="text-gray-500 dark:text-gray-500">
-                  → Signals, custom directives & pipes, standalone components to
-                  make it future proof. Also simplifying the codebase to make
-                  more accessible to other developers.
+                  →{" "}
+                  <span className="text-gray-700 dark:text-gray-400">
+                    Signals
+                  </span>
+                  , custom directives,{" "}
+                  <span className="text-gray-700 dark:text-gray-400">
+                    Resource API
+                  </span>{" "}
+                  to make it future proof. Also simplifying the codebase to make
+                  it more accessible to other developers.
                 </span>
               </li>
               <li>
-                Professional: Design system with{" "}
                 <strong className="text-gray-900 dark:text-gray-200">
-                  PrimeNG (v19+)
-                </strong>{" "}
-                theming
+                  Professional
+                </strong>
+                : Design system with PrimeNG (v19+) theming
                 <br />
                 <span className="text-gray-500 dark:text-gray-500">
-                  → Integrating into legacy codebase and reduce complexity of
-                  different CSS paradigms as component libraries, utility
+                  → Integrating into legacy codebase and{" "}
+                  <span className="text-gray-700 dark:text-gray-400">
+                    reduce complexity
+                  </span>{" "}
+                  of different CSS paradigms as component libraries, utility
                   frameworks vs BEM pattern.
                 </span>
               </li>
               <li>
-                Professional: Dependency reduction
+                <strong className="text-gray-900 dark:text-gray-200">
+                  Professional
+                </strong>
+                : Dependency reduction
                 <br />
                 <span className="text-gray-500 dark:text-gray-500">
-                  → Prefering to use specification build-ins, rather than
-                  installing many libraries. Easier maintenance, faster upgrades
-                </span>
-              </li>
-              <li>
-                Professional: Multi-org management dashboard for Atlassian
-                Confluence (Data Center)
-                <br />
-                <span className="text-gray-500 dark:text-gray-500">
-                  → Built from scratch and communicates with confluence and
-                  custom REST API backend.
+                  → Prefering to use{" "}
+                  <span className="text-gray-700 dark:text-gray-400">
+                    ECMAScript Language Spec API
+                  </span>
+                  , rather than installing many libraries. Easier maintenance,
+                  faster upgrades
                 </span>
               </li>
               <li>
                 <strong className="text-gray-900 dark:text-gray-200">
-                  Personal: Fullstack
-                </strong>{" "}
-                Q&A platform for pet owners
+                  Professional
+                </strong>
+                : Multi-org management dashboard to support managing Atlassian
+                Confluence (Data Center).
+                <br />
+                <span className="text-gray-500 dark:text-gray-500">
+                  → Built from scratch and communicates with{" "}
+                  <span className="text-gray-700 dark:text-gray-400">
+                    Atlassian Confluence
+                  </span>{" "}
+                  instances and custom REST API backend.
+                </span>
+              </li>
+              <li>
+                <strong className="text-gray-900 dark:text-gray-200">
+                  Personal
+                </strong>
+                : Fullstack Q&A platform for pet owners
                 <br />
                 <span className="text-gray-500 dark:text-gray-500">
                   → Coming soon:{" "}

@@ -54,25 +54,25 @@ export function PRFeed() {
               const commits = await fetchPRCommits(
                 repoInfo.owner,
                 repoInfo.repo,
-                pr.number
+                pr.number,
               );
               const commitDetails = await Promise.all(
                 commits.map((c) =>
-                  fetchCommitDetail(repoInfo.owner, repoInfo.repo, c.sha)
-                )
+                  fetchCommitDetail(repoInfo.owner, repoInfo.repo, c.sha),
+                ),
               );
               return { pr, commits: commitDetails };
             } catch {
               return { pr, commits: [] };
             }
-          })
+          }),
         );
 
         if (append) {
           setPrs((prev) => {
             const existingUrls = new Set(prev.map((p) => p.pr.html_url));
             const uniqueNew = prsWithCommits.filter(
-              (p) => !existingUrls.has(p.pr.html_url)
+              (p) => !existingUrls.has(p.pr.html_url),
             );
             return [...prev, ...uniqueNew];
           });
@@ -82,18 +82,25 @@ export function PRFeed() {
         setPage(pageNum + 1);
       } catch (err) {
         if (err instanceof RateLimitError) {
-          toast((t) => <RateLimitToast retryAfter={err.retryAfter} toastId={t.id} />, {
-            duration: err.retryAfter * 1000,
-            className: 'dark:!bg-gray-800 dark:!text-gray-100',
-          });
+          toast(
+            (t) => (
+              <RateLimitToast retryAfter={err.retryAfter} toastId={t.id} />
+            ),
+            {
+              duration: err.retryAfter * 1000,
+              className: "dark:!bg-gray-800 dark:!text-gray-100",
+            },
+          );
         } else {
-          toast.error(err instanceof Error ? err.message : "Failed to load PRs");
+          toast.error(
+            err instanceof Error ? err.message : "Failed to load PRs",
+          );
         }
       } finally {
         setLoading(false);
       }
     },
-    [loading]
+    [loading],
   );
 
   // Initial load and filter change
@@ -112,7 +119,7 @@ export function PRFeed() {
           loadPRs(page, selectedLanguages, true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (loaderRef.current) {
@@ -143,7 +150,7 @@ export function PRFeed() {
         )}
         {!loading && !hasMore && prs.length === 0 && (
           <p className="text-gray-500 dark:text-gray-400">
-            No pull requests found
+            No recent pull requests found
           </p>
         )}
       </div>

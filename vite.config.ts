@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import devServer from '@hono/vite-dev-server'
 
 export default defineConfig({
-  base: '/kommit/',
+  base: process.env.NODE_ENV === 'production' ? '/kommit/' : '/',
   plugins: [
     react(),
     tailwindcss(),

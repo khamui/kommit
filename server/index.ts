@@ -1,31 +1,31 @@
-import { config } from 'dotenv'
-config({ path: '.env.local' })  // Only for local dev, ignored in production
-import { Hono } from 'hono'
-import { cors } from 'hono/cors'
-import { githubRoutes } from './routes/github'
-import { rateLimiter } from './middleware/rateLimit'
+import { config } from "dotenv";
+config({ path: ".env.local" }); // Only for local dev, ignored in production
+import { Hono } from "hono";
+import { cors } from "hono/cors";
+import { githubRoutes } from "./routes/github";
+import { rateLimiter } from "./middleware/rateLimit";
 
-const app = new Hono()
+const app = new Hono();
 
 // CORS configuration
-const allowedOrigin = process.env.ALLOWED_ORIGIN || 'http://localhost:5173'
+const allowedOrigin = process.env.ALLOWED_ORIGIN || "http://localhost:5173";
 app.use(
-  '*',
+  "*",
   cors({
     origin: allowedOrigin,
-    allowMethods: ['GET', 'OPTIONS'],
-    allowHeaders: ['Content-Type'],
+    allowMethods: ["GET", "OPTIONS"],
+    allowHeaders: ["Content-Type"],
     maxAge: 86400,
-  })
-)
+  }),
+);
 
 // Rate limiting: 100 requests per minute per IP
-app.use('*', rateLimiter(100, 60000))
+app.use("*", rateLimiter(250, 60000));
 
 // Mount GitHub routes
-app.route('/api/github', githubRoutes)
+app.route("/api/github", githubRoutes);
 
 // Health check
-app.get('/health', (c) => c.json({ status: 'ok' }))
+app.get("/health", (c) => c.json({ status: "ok" }));
 
-export default app
+export default app;

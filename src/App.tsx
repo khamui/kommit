@@ -59,71 +59,86 @@ function AppContent() {
                 <strong className="text-gray-900 dark:text-gray-200">
                   Professional
                 </strong>
-                : Modernizing legacy to recent versions of Angular (v20+)
+                : Developing a Management Dashboard leveraging Atlassian
+                Confluence Data Center to be used across multiple institutions.
+                Over 30 universities in Bavaria are participating.
                 <br />
                 <span className="text-gray-500 dark:text-gray-500">
-                  →{" "}
+                  → Providing a platform for IT Managers and Administrators of
+                  different institutions to manage their{" "}
                   <span className="text-gray-700 dark:text-gray-400">
-                    Signals
+                    Atlassian Confluence Data Center
+                  </span>{" "}
+                  organization.
+                </span>
+              </li>
+              <li>
+                <strong className="text-gray-900 dark:text-gray-200">
+                  Professional
+                </strong>
+                : Extending CMDB (Configuration Management Database) with
+                crucial functionalities to improve IT expert's work to organize
+                the data center's configuration items.
+                <br />
+                <span className="text-gray-500 dark:text-gray-500">
+                  → Using frontend latest best practices, for instance{" "}
+                  <span className="text-gray-700 dark:text-gray-400">
+                    Signals API
                   </span>
-                  , custom directives,{" "}
+                  , custom directives & custom pipes,{" "}
                   <span className="text-gray-700 dark:text-gray-400">
                     Resource API
                   </span>{" "}
-                  to make it future proof. Also simplifying the codebase to make
-                  it more accessible to other developers.
+                  to make the web application future proof. Simplifying the
+                  codebase to make it easier to maintain (updates and issues)
+                  and faster to extend.
                 </span>
               </li>
               <li>
                 <strong className="text-gray-900 dark:text-gray-200">
                   Professional
                 </strong>
-                : Design system with PrimeNG (v19+) theming
+                : Implementing a Design system with PrimeNG themes for CMDB, to
+                improve visuality for the sheer amount of information. Further
+                the performance is maxed out, as we avoid transitions and delays
+                and only import CSS which is used.
                 <br />
                 <span className="text-gray-500 dark:text-gray-500">
-                  → Integrating into legacy codebase and{" "}
+                  → Declutter different styling paradigms, such as Material,
+                  Bootstrap, PrimeNG, to use only one, which{" "}
                   <span className="text-gray-700 dark:text-gray-400">
-                    reduce complexity
+                    reduces complexity
                   </span>{" "}
-                  of different CSS paradigms as component libraries, utility
-                  frameworks vs BEM pattern.
+                  and makes thinks easier to update and maintain. The new system
+                  relies on PrimeNG Themes (v19+) and integrates TailwindCSS as
+                  utility framework nicely.
                 </span>
               </li>
               <li>
                 <strong className="text-gray-900 dark:text-gray-200">
                   Professional
                 </strong>
-                : Dependency reduction
+                : Making all web applications more robust and future proof.
                 <br />
                 <span className="text-gray-500 dark:text-gray-500">
-                  → Prefering to use{" "}
+                  → I prefer to use the{" "}
                   <span className="text-gray-700 dark:text-gray-400">
                     ECMAScript Language Spec API
                   </span>
-                  , rather than installing many libraries. Easier maintenance,
-                  faster upgrades
-                </span>
-              </li>
-              <li>
-                <strong className="text-gray-900 dark:text-gray-200">
-                  Professional
-                </strong>
-                : Multi-org management dashboard to support managing Atlassian
-                Confluence (Data Center).
-                <br />
-                <span className="text-gray-500 dark:text-gray-500">
-                  → Built from scratch and communicates with{" "}
-                  <span className="text-gray-700 dark:text-gray-400">
-                    Atlassian Confluence
-                  </span>{" "}
-                  instances and custom REST API backend.
+                  , rather than installing many third party libraries. This
+                  improves security and maintainability as Open Source libraries
+                  should be consumed with care. Functionality which relies on
+                  deprecated packages can lead to update stagnation. Evaluate
+                  the vitals of a library helps and refactor code, by using the
+                  specification functionality over third party libraries is
+                  preferable.
                 </span>
               </li>
               <li>
                 <strong className="text-gray-900 dark:text-gray-200">
                   Personal
                 </strong>
-                : Fullstack Q&A platform for pet owners
+                : Implementing and running a Q&A platform for pet owners.
                 <br />
                 <span className="text-gray-500 dark:text-gray-500">
                   → Coming soon:{" "}
@@ -131,7 +146,7 @@ function AppContent() {
                     href="https://www.helpa.ws"
                     className="underline hover:text-blue-500"
                   >
-                    helpa.ws
+                    www.helpa.ws
                   </a>
                 </span>
               </li>

@@ -30,8 +30,12 @@ function AppContent() {
           <ThemeToggle />
         </div>
         <p className="mt-4 text-gray-700 dark:text-gray-400 mb-[2rem]">
-          Angular and React expert. Proficient in fullstack development.
-          Experimenting with agentic engineering.
+          Angular and React expert. Solving real problems with strong user
+          oriented designs. Writing production level code. Proficient in
+          fullstack development. Includes writing own tools, automating
+          continuous integration, testing relevant components and tailoring to
+          run in any infrastructure. Also experimenting with agentic
+          engineering.
         </p>
         <div>
           <button
@@ -59,7 +63,7 @@ function AppContent() {
                 <strong className="text-gray-900 dark:text-gray-200">
                   Professional
                 </strong>
-                : Developing a Management Dashboard leveraging Atlassian
+                : Developing a Management Dashboard to leverage Atlassian
                 Confluence Data Center to be used across multiple institutions.
                 Over 30 universities in Bavaria are participating.
                 <br />
@@ -109,7 +113,7 @@ function AppContent() {
                   <span className="text-gray-700 dark:text-gray-400">
                     reduces complexity
                   </span>{" "}
-                  and makes thinks easier to update and maintain. The new system
+                  and makes things easier to update and maintain. The new system
                   relies on PrimeNG Themes (v19+) and integrates TailwindCSS as
                   utility framework nicely.
                 </span>

@@ -13,11 +13,4 @@ export const config = {
   api: {
     baseUrl: getRequiredEnv("VITE_API_URL"),
   },
-  textContent: {
-    mainTitle: "Kha Tran",
-    pronouns: "(he/him)",
-    role: "Senior Frontend Developer",
-    shortIntro:
-      "Angular and React expert. Proficient in fullstack development. Experimenting with agentic engineering.",
-  },
 };

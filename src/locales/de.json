@@ -1,0 +1,44 @@
+{
+  "header": {
+    "title": "Senior Frontend Entwickler",
+    "bio": "Angular- und React-Experte. Erfahren in der Fullstack-Entwicklung. Aktuell experimentiere ich mit Agentic Engineering.",
+    "projectsToggle": "Aktuelle Projekte, an denen ich arbeite..."
+  },
+  "labels": {
+    "professional": "Beruflich",
+    "personal": "Persönlich"
+  },
+  "projects": {
+    "dashboard": "Entwicklung eines Management Dashboards zur Nutzung von Atlassian Confluence Data Center, das von mehreren Institutionen verwendet wird. Über 30 Universitäten in Bayern nehmen teil.",
+    "dashboardDetail": "Bereitstellung einer Plattform für IT-Manager und Administratoren verschiedener Institutionen zur Verwaltung ihrer",
+    "dashboardDetailEnd": "Organisation.",
+    "cmdb": "Erweiterung der CMDB (Configuration Management Database) mit wichtigen Funktionen zur Verbesserung der Arbeit von IT-Experten bei der Organisation der Konfigurationselemente des Rechenzentrums.",
+    "cmdbDetail": "Nutzung aktueller Frontend Best Practices, zum Beispiel",
+    "cmdbDetailEnd": "um die Webanwendung zukunftssicher zu machen. Vereinfachung der Codebasis für einfachere Wartung (Updates und Probleme) und schnellere Erweiterungen.",
+    "designSystem": "Implementierung eines Design-Systems mit PrimeNG-Themes für CMDB zur Verbesserung der Visualisierung großer Informationsmengen. Außerdem ist die Performance optimiert, da wir Transitionen und Verzögerungen vermeiden und nur verwendetes CSS importieren.",
+    "designSystemDetail": "Bereinigung verschiedener Styling-Paradigmen wie Material, Bootstrap, PrimeNG, um nur eines zu verwenden, was",
+    "reducesComplexity": "Komplexität reduziert",
+    "designSystemDetailEnd": "und die Wartung erleichtert. Das neue System basiert auf PrimeNG Themes (v19+) und integriert TailwindCSS als Utility-Framework.",
+    "helpa": "Implementierung und Betrieb einer Q&A-Plattform für Tierfreunde",
+    "helpaDetail": "Demnächst:"
+  },
+  "feed": {
+    "noMore": "Keine weiteren Pull Requests",
+    "noRecent": "Keine aktuellen Pull Requests gefunden",
+    "loadError": "Pull Requests konnten nicht geladen werden"
+  },
+  "filter": {
+    "clear": "Löschen"
+  },
+  "commits": {
+    "count": "{{count}} Commit",
+    "countPlural": "{{count}} Commits",
+    "showMore": "{{count}} weitere Commits anzeigen",
+    "showFewer": "Weniger Commits anzeigen"
+  },
+  "files": {
+    "showMore": "{{count}} weitere Dateien anzeigen",
+    "showFewer": "Weniger Dateien anzeigen"
+  },
+  "rateLimit": "Rate-Limit erreicht. Erneut in {{seconds}}s"
+}

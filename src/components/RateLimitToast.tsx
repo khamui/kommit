@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import toast from 'react-hot-toast'
+import { useLanguage } from '../context/LanguageContext'
 
 interface RateLimitToastProps {
   retryAfter: number
@@ -8,6 +9,7 @@ interface RateLimitToastProps {
 
 export function RateLimitToast({ retryAfter, toastId }: RateLimitToastProps) {
   const [countdown, setCountdown] = useState(retryAfter)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -34,7 +36,7 @@ export function RateLimitToast({ retryAfter, toastId }: RateLimitToastProps) {
           d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
         />
       </svg>
-      <span>Rate limited. Retry in {countdown}s</span>
+      <span>{t("rateLimit", { seconds: countdown })}</span>
     </div>
   )
 }

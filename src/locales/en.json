@@ -1,0 +1,44 @@
+{
+  "header": {
+    "title": "Senior Frontend Developer",
+    "bio": "Angular and React expert. Proficient in fullstack development. Currently experimenting with agentic engineering.",
+    "projectsToggle": "Current projects I am working on..."
+  },
+  "labels": {
+    "professional": "Professional",
+    "personal": "Personal"
+  },
+  "projects": {
+    "dashboard": "Developing a Management Dashboard to leverage Atlassian Confluence Data Center to be used across multiple institutions. Over 30 universities in Bavaria are participating.",
+    "dashboardDetail": "Providing a platform for IT Managers and Administrators of different institutions to manage their",
+    "dashboardDetailEnd": "organization.",
+    "cmdb": "Extending CMDB (Configuration Management Database) with crucial functionalities to improve IT expert's work to organize the data center's configuration items.",
+    "cmdbDetail": "Using frontend latest best practices, for instance",
+    "cmdbDetailEnd": "to make the web application future proof. Simplifying the codebase to make it easier to maintain (updates and issues) and faster to extend.",
+    "designSystem": "Implementing a Design system with PrimeNG themes for CMDB, to improve visuality for the sheer amount of information. Further the performance is maxed out, as we avoid transitions and delays and only import CSS which is used.",
+    "designSystemDetail": "Declutter different styling paradigms, such as Material, Bootstrap, PrimeNG, to use only one, which",
+    "reducesComplexity": "reduces complexity",
+    "designSystemDetailEnd": "and makes things easier to update and maintain. The new system relies on PrimeNG Themes (v19+) and integrates TailwindCSS as utility framework nicely.",
+    "helpa": "Implementing and running a Q&A platform for pet owners.",
+    "helpaDetail": "Coming soon:"
+  },
+  "feed": {
+    "noMore": "No more pull requests",
+    "noRecent": "No recent pull requests found",
+    "loadError": "Failed to load PRs"
+  },
+  "filter": {
+    "clear": "Clear"
+  },
+  "commits": {
+    "count": "{{count}} commit",
+    "countPlural": "{{count}} commits",
+    "showMore": "Show {{count}} more commits",
+    "showFewer": "Show fewer commits"
+  },
+  "files": {
+    "showMore": "Show {{count}} more files",
+    "showFewer": "Show fewer files"
+  },
+  "rateLimit": "Rate limited. Retry in {{seconds}}s"
+}

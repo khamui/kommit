@@ -1,20 +1,22 @@
 import { CommitList } from './CommitList'
 import type { PullRequest, CommitDetail } from '../services/github'
+import { useLanguage } from '../context/LanguageContext'
 
 interface PRCardProps {
   pr: PullRequest
   commits: CommitDetail[]
 }
 
-function formatDate(dateString: string): string {
-  return new Date(dateString).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  })
-}
-
 export function PRCard({ pr, commits }: PRCardProps) {
+  const { lang, t } = useLanguage()
+
+  const formatDate = (dateString: string): string => {
+    return new Date(dateString).toLocaleDateString(lang === 'de' ? 'de-DE' : 'en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    })
+  }
   return (
     <article className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
       <time className="text-sm text-gray-500 dark:text-gray-400">{formatDate(pr.merged_at)}</time>
@@ -33,7 +35,9 @@ export function PRCard({ pr, commits }: PRCardProps) {
       )}
       <div className="mt-4">
         <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2">
-          {commits.length} commit{commits.length !== 1 ? 's' : ''}
+          {commits.length === 1
+            ? t("commits.count", { count: 1 })
+            : t("commits.countPlural", { count: commits.length })}
         </h3>
         <CommitList commits={commits} />
       </div>

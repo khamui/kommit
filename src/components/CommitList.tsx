@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { CodeBlock } from './CodeBlock'
 import type { CommitDetail } from '../services/github'
+import { useLanguage } from '../context/LanguageContext'
 
 interface CommitListProps {
   commits: CommitDetail[]
@@ -11,6 +12,7 @@ const MAX_FILES = 5
 
 function CommitItem({ commit }: { commit: CommitDetail }) {
   const [filesExpanded, setFilesExpanded] = useState(false)
+  const { t } = useLanguage()
   const needsFilesTruncation = commit.files.length > MAX_FILES
   const displayFiles = filesExpanded ? commit.files : commit.files.slice(0, MAX_FILES)
 
@@ -32,8 +34,8 @@ function CommitItem({ commit }: { commit: CommitDetail }) {
             className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
           >
             {filesExpanded
-              ? 'Show fewer files'
-              : `Show ${commit.files.length - MAX_FILES} more files`}
+              ? t("files.showFewer")
+              : t("files.showMore", { count: commit.files.length - MAX_FILES })}
           </button>
         )}
       </div>
@@ -43,6 +45,7 @@ function CommitItem({ commit }: { commit: CommitDetail }) {
 
 export function CommitList({ commits }: CommitListProps) {
   const [expanded, setExpanded] = useState(false)
+  const { t } = useLanguage()
   const needsTruncation = commits.length > MAX_COMMITS
   const displayCommits = expanded ? commits : commits.slice(0, MAX_COMMITS)
 
@@ -57,8 +60,8 @@ export function CommitList({ commits }: CommitListProps) {
           className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
         >
           {expanded
-            ? 'Show fewer commits'
-            : `Show ${commits.length - MAX_COMMITS} more commits`}
+            ? t("commits.showFewer")
+            : t("commits.showMore", { count: commits.length - MAX_COMMITS })}
         </button>
       )}
     </div>

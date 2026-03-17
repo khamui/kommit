@@ -11,6 +11,7 @@ import {
   type CommitDetail,
 } from "../services/github";
 import { RateLimitToast } from "./RateLimitToast";
+import { useLanguage } from "../context/LanguageContext";
 
 interface PRWithCommits {
   pr: PullRequest;
@@ -32,6 +33,7 @@ export function PRFeed() {
   const [hasMore, setHasMore] = useState(true);
   const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
   const loaderRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   const loadPRs = useCallback(
     async (pageNum: number, languages: string[], append: boolean) => {
@@ -93,7 +95,7 @@ export function PRFeed() {
           );
         } else {
           toast.error(
-            err instanceof Error ? err.message : "Failed to load PRs",
+            err instanceof Error ? err.message : t("feed.loadError"),
           );
         }
       } finally {
@@ -145,12 +147,12 @@ export function PRFeed() {
         )}
         {!hasMore && prs.length > 0 && (
           <p className="text-gray-500 dark:text-gray-400">
-            No more pull requests
+            {t("feed.noMore")}
           </p>
         )}
         {!loading && !hasMore && prs.length === 0 && (
           <p className="text-gray-500 dark:text-gray-400">
-            No recent pull requests found
+            {t("feed.noRecent")}
           </p>
         )}
       </div>

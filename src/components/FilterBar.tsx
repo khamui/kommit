@@ -1,3 +1,5 @@
+import { useLanguage } from '../context/LanguageContext'
+
 interface FilterBarProps {
   languages: string[]
   selected: string[]
@@ -5,6 +7,7 @@ interface FilterBarProps {
 }
 
 export function FilterBar({ languages, selected, onChange }: FilterBarProps) {
+  const { t } = useLanguage()
   const toggleLanguage = (lang: string) => {
     if (selected.includes(lang)) {
       onChange(selected.filter((l) => l !== lang))
@@ -38,7 +41,7 @@ export function FilterBar({ languages, selected, onChange }: FilterBarProps) {
           onClick={() => onChange([])}
           className="px-3 py-1 text-sm rounded-full text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
         >
-          Clear
+          {t("filter.clear")}
         </button>
       )}
     </div>
